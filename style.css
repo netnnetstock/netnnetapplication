@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+header{
+  position: relative;
+left: 0;
+top: 0;
+width: 1005;
+height: 80px;
+}
+
+/*splash screen */
+
+.intro{
+  position: fixed;
+  z-index:1 ;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #161611;
+  transition: 1s;
+}
+.logo-header{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+
+}
+
+.logo{
+  position: absolute;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+.logo.active{
+  bottom: 0;
+  opacity: 1;
+  transition:  ease-in-out.5s;
+
+
+}
+.logo.fade{
+  bottom: 150px;
+  opacity: 0;
+  transition:  ease-in-out.5s;
+}
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(18, 18, 18);
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+  
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

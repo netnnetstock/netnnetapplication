@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>netnnetApp</title>
+</head>
+<body>
+  <div class="intro">
+    <h1 class="logo-header">
+      <span class="logo">NET</span><span class="logo">N</span><span class="logo">NET</span>
+    </h1>
+  </div>
+  
+
+    <div class="container">
+        <div style="text-align:center">
+          <img src="netnnet.png.png">
+          <h2><i><strong>NETNNET STOCK</strong></i></h2>
+          <p></p>
+        </div>
+        <div class="row">
+          
+          <div class="column">
+            <form id="submit-form" action="">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="name" placeholder="Full Name..">
+              <label for="lname">Work Place</label>
+              <input type="text" id="lname" name="email" placeholder="Work Place here..">
+              <label for="country">Stock Type</label>
+              <select id="country" name="colour">
+                <option value="Taken materials">Taken</option>
+                <option value="Return meterials">Return</option>
+              </select>
+              
+              
+              
+            
+              <label for="subject">STOCK</label>
+              <textarea id="subject" name="message" placeholder="Stock Details.." style="height:170px"></textarea>
+             <input
+               type="submit" value="Submit">
+               
+                
+               
+               
+        
+                   
+                 
+               </style>
+            </form>
+          </div>
+          <div class="column">
+            <img src="https://netnnetsolutions.com/images/logo.png" style="width:100%">
+          </div>
+        </div>
+      </div>
+      <a href="https://netnnetsolution.github.io/NetnNetsolution/">Work Unavailability form</a>
+      <br>
+      <a href="https://portal.netnnetsolutions.com/staff_login.php">Portal</a>
+      <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbyuPE_SFfivog1ZcQBP24BCslN5qCuyI6-krqAX5gs4ZzBf8Q33cXN6pdIBtzDNpIZLLA/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
